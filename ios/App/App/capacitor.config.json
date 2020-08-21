@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "qrdreams",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "server": {
+    "url": "http://10.9.174.254:8100",
+    "cleartext": true
+  }
+}

@@ -3,13 +3,14 @@ import { CameraPreview, CameraPreviewPictureOptions, CameraPreviewOptions, Camer
 
 const cameraPreviewOpts: CameraPreviewOptions = {
   x: 0,
-  y: 0,
+  y: 200,
   width: window.screen.width,
-  height: window.screen.height,
+  height: window.screen.height/2,
   camera: 'rear',
   tapPhoto: true,
-  previewDrag: true,
-  toBack: true,
+  tapFocus: true,
+  previewDrag: false,
+  toBack: false,
   alpha: 1
 }
 
@@ -24,7 +25,7 @@ export class HomePage implements OnInit {
 
   constructor(private cameraPreview: CameraPreview) { }
 
-  ngOnInit() {
+  snapImage() {
     this.cameraPreview.startCamera(cameraPreviewOpts).then(
       (res) => {
         console.log(res);
@@ -33,5 +34,17 @@ export class HomePage implements OnInit {
         console.error(err);
       }
     );
+  }
+
+  switchCamera() {
+    this.cameraPreview.switchCamera();
+  }
+
+  stopCamera() {
+    this.cameraPreview.stopCamera();
+  }
+
+  ngOnInit() {
+    this.stopCamera();
   }
 }
