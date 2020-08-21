@@ -1,0 +1,7 @@
+{
+  "name": "qrdreams",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

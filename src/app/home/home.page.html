@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      QRDreams
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">QRDreams</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>How to make it slide?</ion-card-subtitle>
+        <ion-card-title>Camera Test</ion-card-title>
+        <img [src]="previewArea">
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>Filler content</p>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-fab horizontal="center" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="snapImage()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
